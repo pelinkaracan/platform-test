@@ -14,13 +14,15 @@ class CompletedOrder extends React.Component {
     customizeText(e: any) {
         return `Day ${e.value}`;
     }
+  
     render() {
+        const datasource = 'datas/completedOrderDatas.json';
         return (
-            <div className={'fragment'}>
+            <div>
                 <h2 className={'content-block'}>Tamamlanan  Siparişler</h2>
                 <Chart
                     title="Daily Sales"
-                    dataSource="datas/completedOrderDatas.json"
+                    dataSource={datasource}
                     rotated={true}
                     id="chart"
                 >
